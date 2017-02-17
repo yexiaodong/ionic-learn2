@@ -1,0 +1,20 @@
+//条带
+//=======================================
+.tabs-striped{
+  a{
+    color:$color-font-striped;
+  }
+}
+//页脚
+//=======================================
+.bar-footer{
+  padding: 0;
+  a{
+    color:$color-font-footer;
+  }
+  .tab-active{
+    a{
+      color: $color-font-footer-active;
+    }
+  }
+}

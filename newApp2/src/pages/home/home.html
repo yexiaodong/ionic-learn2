@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h2 padding>备忘录</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>
+  </ion-list>
+</ion-content>

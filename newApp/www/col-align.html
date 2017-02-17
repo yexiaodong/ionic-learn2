@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic入门学习</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- 标题 -->
+    <div class="bar bar-header bar-dark">
+      <a href="col.html" class="button icon ion-paper-airplane">栅格</a>
+      <h1 class="title">栅格系统</h1>
+      <a href="index.html" class="button icon ion-home">首页</a>
+    </div>
+    <!-- 副标题 -->
+    <div class="tabs-striped tabs-top">
+      <div class="tabs ">
+        <a href="col.html" class="tab-item ">基本</a>
+        <a href="col-align.html" class="tab-item active">列纵向对齐col-{align}</a>
+      </div>
+    </div>
+
+    <div class="scroll-content has-subheader">
+      <!-- 栅格 -->
+      <h5>矮的元素被拉伸</h5>
+      <div class=" row">
+        <div class="col">矮元素</div>
+        <div class="col">矮元素</div>
+        <div class="col">矮元素</div>
+        <div class="col">矮元素</div>
+        <div class="col">高元素<br>1<br>2<br>3<br></div>
+      </div>
+
+      <h5>列纵向对齐方式</h5>
+      <div class=" row">
+        <div class="col col-top">top</div>
+        <div class="col col-center">center</div>
+        <div class="col col-bottom">bottom</div>
+        <div class="col">矮元素</div>
+        <div class="col">高元素<br>1<br>2<br>3<br></div>
+      </div>
+
+    </div>
+    <style>
+      [class ^="col"]{
+        background-color: #7ac1ee;
+        border: 1px solid #475bed;
+      }
+      .metro [class ^="col"]{
+        background-color: #7ac1ee;
+        border: 0px;
+      }
+      .metro .col {
+        margin: 5px;
+        height: 85px;
+        text-align: center;
+        line-height: 32px;
+      }
+      .metro i{
+        font-size: 30px;
+      }
+    </style>
+  </body>
+</html>

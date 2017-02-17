@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic入门学习</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- 标题 -->
+    <div class="bar bar-header bar-dark">
+      <a href="col.html" class="button icon ion-paper-airplane">栅格</a>
+      <h1 class="title">栅格系统</h1>
+      <a href="index.html" class="button icon ion-home">首页</a>
+    </div>
+    <!-- 副标题 -->
+    <div class="tabs-striped tabs-top">
+      <div class="tabs ">
+        <a href="col.html" class="tab-item active">基本</a>
+        <a href="col-align.html" class="tab-item">列纵向对齐col-{align}</a>
+      </div>
+    </div>
+
+    <div class="scroll-content has-subheader">
+      <!-- 栅格 -->
+      <h5>等宽列（默认）</h5>
+      <div class=" row">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+
+      <h5>指定宽度</h5>
+      <div class="row">
+        <div class="col col-40">col-40</div>
+        <div class="col">col</div>
+      </div>
+      <div class="row">
+        <div class="col-75">col-75</div>
+        <div class="col">col</div>
+      </div>
+      <div class="row">
+        <div class="col col-10">10</div>
+        <div class="col col-40">col-40</div>
+        <div class="col">col</div>
+      </div>
+
+      <h5>指定列偏移</h5>
+      <div class="row">
+        <div class="col col-40 col-offset-10">col-40</div>
+        <div class="col">col</div>
+      </div>
+
+      <h5>metro风格（widnows phone的风格）</h5>
+      <div class="row metro">
+        <div class="col calm-bg light">
+          <div>酒店</div>
+          <i class="icon ion-home"></i>
+        </div>
+        <div class="col col-25 calm-bg light">
+          <div>用车</div>
+          <i class="icon ion-model-s"></i>
+        </div>
+      </div>
+    </div>
+    <style>
+      [class ^="col"]{
+        background-color: #7ac1ee;
+        border: 1px solid #475bed;
+      }
+      .metro [class ^="col"]{
+        background-color: #7ac1ee;
+        border: 0px;
+      }
+      .metro .col {
+        margin: 5px;
+        height: 85px;
+        text-align: center;
+        line-height: 32px;
+      }
+      .metro i{
+        font-size: 30px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Cordova学习</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body  ng-app="ngCordovaImage"  ng-controller="ImageCtrl">
+
+    <ion-pane>
+      <!-- 页眉 -->
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">ngCordova</h1>
+      </ion-header-bar>
+      <nav class="tabs-striped tabs-top">
+        <ul class="tabs">
+          <li class="tab-item "><a href="phone.html">相机</a></li>
+          <li class="tab-item active"><a href="phone-image.html">相册</a></li>
+          <li class="tab-item"><a href="phone-file.html">文件</a></li>
+          <li class="tab-item"><a href="phone-orientation.html">定位</a></li>
+        </ul>
+      </nav>
+
+      <!-- 内容 -->
+      <ion-content class="padding has-subheader">
+        <h4>系统相册 Image Picker</h4>
+        <button ng-click="openImage()"  >打开相册</button>
+        <button ng-click="testImagePicker()" >按钮测试</button>
+
+        <div class="list">
+          <div class="item" ng-repeat="img in images_list">
+            <img src="{{img}}">
+          </div>
+          <div class="item" ng-repeat="img in images_test">
+            <img src="{{img}}">
+          </div>
+          <di class="item">
+            <img id="myImage" src="img/logo.png">
+          </di>
+        </div>
+
+
+      </ion-content>
+
+      <!-- 页脚 -->
+      <ion-footer-bar>
+        <ul class="tabs tabs-icon-top tabs-stable">
+          <li class="tab-item">
+            <a href="index.html">
+              <i class="icon ion-home"></i>
+              首页
+            </a>
+          </li>
+          <li class="tab-item tab-active">
+            <a href="phone.html">
+              <i class="icon ion-android-phone-portrait"></i>
+              手机接口
+            </a>
+          </li>
+          <li class="tab-item">
+            <a href="data.html">
+              <i class="icon ion-stats-bars"></i>
+              数据传输
+            </a>
+          </li>
+          <li class="tab-item">
+            <a href="other.thml">
+              <i class="icon ion-ionic"></i>
+              其他测试
+            </a>
+          </li>
+        </ul>
+      </ion-footer-bar>
+
+    </ion-pane>
+  </body>
+</html>

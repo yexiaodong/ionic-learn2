@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic入门学习</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- 标题 -->
+    <div class="bar bar-header bar-dark">
+      <h1 class="title">Ionic组件-表单</h1>
+    </div>
+    <!-- 副标题 -->
+    <div class="bar bar-subheader bar-stable">
+      <div class="button-bar">
+        <a href="form.html" class="button button-clear">基本</a>
+        <a href="form2.html" class="button button-clear">中级</a>
+        <a href="form3.html" class="button button-balanced">高级</a>
+      </div>
+    </div>
+
+    <div class="scroll-content has-subheader">
+      <div class="list">
+        <!-- 单选按钮 -->
+        <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="radio-content">
+            <div class="item-content radio-content">单选按钮1</div>
+            <i class="radio-icon ion-checkmark assertive"></i>
+          </div>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="radio-content">
+            <div class="item-content radio-content">单选按钮2</div>
+            <i class="radio-icon ion-checkmark assertive"></i>
+          </div>
+        </label>
+
+        <!-- 滑动条，打包后才显示颜色 -->
+        <div class="item range range-royal">
+          <i class="icon ion-ios-volume-low"></i>
+          <input type="range" name="volume" value="30">
+          <i class="icon ion-ios-volume-high"></i>
+        </div>
+
+        <!-- 选择框，在PC/Android/IOS中显示各不相同 -->
+        <label class="item item-input item-select">
+          <div class="input-label">选择框</div>
+          <select>
+            <option>选项1</option>
+            <option>选项2</option>
+            <option>选项3</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="bar bar-footer bar-dark">
+      <h1 class="title">Footer</h1>
+      <a href="btn.html" class="button icon ion-home"></a>
+    </div>
+  </body>
+</html>
+
+
+<!--
+<ul class="list">
+        <li class="item item-checkbox item-icon-right">
+          <label class="checkbox">
+            <input type="checkbox">
+          </label>
+          <h2>复选框</h2>
+          <p>XXXXXX</p>
+          <a class="icon ion-ios-arrow-right"></a>
+        </li>
+        <li class="item item-checkbox item-icon-right">
+          <label class="checkbox">
+            <input type="checkbox">
+          </label>
+          <h2>复选框2</h2>
+          <p>XXXXXX</p>
+          <a class="icon ion-ios-arrow-right"></a>
+        </li>
+        <li class="item item-"></li>
+      </ul>
+      -->

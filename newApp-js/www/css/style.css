@@ -1,0 +1,12 @@
+a {
+  text-decoration: none; }
+
+.tabs-striped a {
+  color: #444444; }
+
+.bar-footer {
+  padding: 0; }
+  .bar-footer a {
+    color: #444444; }
+  .bar-footer .tab-active a {
+    color: #0c60ee; }
