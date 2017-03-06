@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Segment-滑动</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--分类菜单-->
+  <ion-segment [(ngModel)]="selectedSegment" (ionChange)="onSegmentChanged($event)" >
+    <ion-segment-button *ngFor="let slide of slides" value="{{slide.id}}">
+      {{slide.title}}
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- 内容 -->
+  <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged($event)" >
+    <ion-slide *ngFor="let slide of slides">
+      <h1>{{slide.title}}</h1>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Segments-入门
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        优点
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        缺点
+      </ion-segment-button>
+      <ion-segment-button value="ducklings">
+        建议
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content (swipe)="swipeEvent($event)">
+  <!-- 内容 -->
+  <div [ngSwitch]="pet">
+    <div *ngSwitchCase="'puppies'">
+      <ul>
+        <li>列表，根据某个字段进行，分屏显示</li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="'kittens'">
+      <ul>
+        <li>Segment内容无法左右滑动！</li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="'ducklings'">
+      <ul>
+        <li>使用segment标签加slider标签，但这样Segment标签的意义也失去了。</li>
+      </ul>
+    </div>
+  </div>
+</ion-content>

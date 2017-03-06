@@ -25,7 +25,8 @@ export class HomePage {
       {title:'hi3',description:'test3'}
     ];
   }
-
+	
+	//打开添加视图
   addItem(){
     let addModal = this.modalCtrl.create(AddItemPage);
     addModal.onDidDismiss((item)=>{
@@ -36,12 +37,14 @@ export class HomePage {
     });
     addModal.present();
   }
-
+	
+	//保存
   saveItem(item){
     this.items.push(item);
     this.dataService.save(this.items);
   }
 
+	//打开详情视图
   viewItem(item){
     this.navCtrl.push(ItemDetailPage,{
       item:item

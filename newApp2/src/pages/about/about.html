@@ -1,11 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      About-组件/UI
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <!--组件使用（简单）-->
+  <page-model-test></page-model-test>
 
+  <!-- 组件使用（输入） -->
+  <!--
+  <page-model-inputs-outputs inputplaceholder="New todo..." buttonlabel="Add" (inputText)="addTodo($event)">
+  </page-model-inputs-outputs>
+  -->
+  <!-- 组件使用（输出） -->
+  <!--
+  <page-model-inputs-outputs-list [todos]="todos" (toggle)="toggleCompletion($event)"></page-model-inputs-outputs-list>
+  -->
+
+  <!-- UI -->
+  <ion-list>
+    <ion-item *ngFor="let item of pageItems" (click)="viewItem(item.page)">{{item.name}}</ion-item>
+  </ion-list>
 </ion-content>

@@ -13,6 +13,10 @@ import { PhoneCallPage } from '../pages/phone-call/phone-call';
 import { PhoneCameraPage } from '../pages/phone-camera/phone-camera';
 import { PhoneNativePage } from '../pages/phone-native/phone-native';
 import { PhoneMailPage } from '../pages/phone-mail/phone-mail';
+import { ModelTestPage } from '../pages/model-test/model-test';
+import { ModelInputsOutputsPage } from '../pages/model-inputs-outputs/model-inputs-outputs';
+import { UiSegmentPage } from "../pages/ui-segment/ui-segment";
+import { UiSegmentSliderPage } from "../pages/ui-segment-slider/ui-segment-slider";
 
 import { Storage } from '@ionic/storage';
 import { Data } from '../providers/data';
@@ -32,7 +36,11 @@ import { Data } from '../providers/data';
     PhoneCallPage,
     PhoneCameraPage,
     PhoneNativePage,
-    PhoneMailPage
+    PhoneMailPage,
+    ModelTestPage,
+    ModelInputsOutputsPage,
+    UiSegmentPage,
+    UiSegmentSliderPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -51,7 +59,11 @@ import { Data } from '../providers/data';
     PhoneCallPage,
     PhoneCameraPage,
     PhoneNativePage,
-    PhoneMailPage
+    PhoneMailPage,
+    ModelTestPage,
+    ModelInputsOutputsPage,
+    UiSegmentPage,
+    UiSegmentSliderPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data]
 })
