@@ -17,6 +17,9 @@ import { ModelTestPage } from '../pages/model-test/model-test';
 import { ModelInputsOutputsPage } from '../pages/model-inputs-outputs/model-inputs-outputs';
 import { UiSegmentPage } from "../pages/ui-segment/ui-segment";
 import { UiSegmentSliderPage } from "../pages/ui-segment-slider/ui-segment-slider";
+import { UiListPage } from "../pages/ui-list/ui-list";
+import { UiListAdvancedPage } from "../pages/ui-list-advanced/ui-list-advanced";
+import { UiListAdvancedImgPage } from '../pages/ui-list-advanced-img/ui-list-advanced-img';
 
 import { Storage } from '@ionic/storage';
 import { Data } from '../providers/data';
@@ -40,7 +43,10 @@ import { Data } from '../providers/data';
     ModelTestPage,
     ModelInputsOutputsPage,
     UiSegmentPage,
-    UiSegmentSliderPage
+    UiSegmentSliderPage,
+    UiListPage,
+    UiListAdvancedPage,
+    UiListAdvancedImgPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -63,7 +69,10 @@ import { Data } from '../providers/data';
     ModelTestPage,
     ModelInputsOutputsPage,
     UiSegmentPage,
-    UiSegmentSliderPage
+    UiSegmentSliderPage,
+    UiListPage,
+    UiListAdvancedPage,
+    UiListAdvancedImgPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data]
 })
