@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ModelInputsOutputsPage } from '../model-inputs-outputs/model-inputs-outputs';
-import { ModelInputsOutputsListPage } from '../model-inputs-outputs-list/model-inputs-outputs-list';
-import { UiSegmentPage } from "../ui-segment/ui-segment";
-import { UiSegmentSliderPage } from "../ui-segment-slider/ui-segment-slider";
-import { UiListPage } from '../ui-list/ui-list';
-import { UiListAdvancedPage } from '../ui-list-advanced/ui-list-advanced';
-import { UiListAdvancedImgPage } from '../ui-list-advanced-img/ui-list-advanced-img';
+import { UiSegmentPage } from "./ui-segment/ui-segment";
+import { UiSegmentSliderPage } from "./ui-segment-slider/ui-segment-slider";
+import { UiListPage } from './ui-list/ui-list';
+import { UiListAdvancedPage } from './ui-list-advanced/ui-list-advanced';
+import { UiListAdvancedImgPage } from './ui-list-advanced-img/ui-list-advanced-img';
 
 interface Todo {
   completed: boolean;
@@ -14,10 +12,10 @@ interface Todo {
 }
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-ui',
+  templateUrl: 'ui.html'
 })
-export class AboutPage {
+export class UiPage {
   todos:Todo[] = [];
   name:string = 'yexd';
   pageItems = [

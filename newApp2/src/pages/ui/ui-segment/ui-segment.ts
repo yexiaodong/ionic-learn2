@@ -11,5 +11,5 @@ export class UiSegmentPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {}
-  
+
 }

@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-import { NavController, NavParams,Slides,Segment } from 'ionic-angular';
+import { NavController, NavParams,Slides} from 'ionic-angular';
 
 @Component({
   selector: 'page-ui-segment-slider',
@@ -38,7 +38,7 @@ export class UiSegmentSliderPage {
     *  1.必须转为字符串否则Segment标签样式不对。
     *  2.必须限制slider最大值，否则它会比原有的大1。
      */
-    let index = (slider._activeIndex>1?1:slider._activeIndex).toString();
+    let index = (slider._activeIndex>2?2:slider._activeIndex).toString();
     if(this.selectedSegment != index){
       this.selectedSegment = index;
     }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { PhoneCallPage } from '../../pages/phone-call/phone-call';
-import { PhoneMailPage } from '../../pages/phone-mail/phone-mail';
-import { PhoneCameraPage } from '../../pages/phone-camera/phone-camera';
-import { PhoneNativePage } from  '../../pages/phone-native/phone-native';
+import { PhoneCallPage } from './phone-call/phone-call';
+import { PhoneMailPage } from './phone-mail/phone-mail';
+import { PhoneCameraPage } from './phone-camera/phone-camera';
+import { PhoneNativePage } from  './phone-native/phone-native';
+import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { XxxPage } from '../../pages/xxx/xxx';
 
 
@@ -20,7 +21,7 @@ export class PhonePage {
 
   ionViewDidLoad(){
     this.pageItems = [
-      {title:'数据交互',icon:'keypad',page:XxxPage,color:'primary'},
+      {title:'读写数据库',icon:'keypad',page:PhoneSQLPage,color:'primary'},
       {title: '加密解密',icon:'key',page:XxxPage,color:'secondary'},
       {title:'拨打电话',icon:'call',page:PhoneCallPage,color:'danger'},
       {title:'读短信',icon:'mail',page:PhoneMailPage,color:'dark'},
