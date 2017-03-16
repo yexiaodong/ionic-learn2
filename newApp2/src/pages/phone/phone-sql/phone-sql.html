@@ -1,12 +1,24 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>读写数据库(SQLite)</ion-title>
+    <ion-title>
+      读写数据库
+    </ion-title>
+    <ion-buttons start>
+      <button (click)="refresh()">Refresh</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button (click)="add()">Add</button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-input type="text" placeholder="firstname" [(ngModel)]="firstname"></ion-input>
+  <ion-input type="text" placeholder="firstname" [(ngModel)]="lastname"></ion-input>
+  {{firstname}}/{{lastname}}
+  <ion-list>
+    <ion-item *ngFor="let person of people">
+      {{person.firstname}} {{person.lastname}}
+    </ion-item>
+  </ion-list>
 </ion-content>

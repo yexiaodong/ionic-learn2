@@ -9,6 +9,7 @@ import { PhoneCameraPage } from './phone-camera/phone-camera';
 import { PhoneNativePage } from './phone-native/phone-native';
 import { PhoneMailPage } from './phone-mail/phone-mail';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
+import { PhoneAESPage } from './phone-aes/phone-aes';
 
 
 @NgModule({
@@ -20,14 +21,16 @@ import { PhoneSQLPage } from './phone-sql/phone-sql';
     PhoneCameraPage,
     PhoneNativePage,
     PhoneMailPage,
-    PhoneSQLPage
+    PhoneSQLPage,
+    PhoneAESPage
   ],
   entryComponents: [
     PhoneCallPage,
     PhoneCameraPage,
     PhoneNativePage,
     PhoneMailPage,
-    PhoneSQLPage
+    PhoneSQLPage,
+    PhoneAESPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data],
   exports: [IonicModule]

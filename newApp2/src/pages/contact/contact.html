@@ -1,18 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      管道-pipe
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-item-divider>常用内置管道</ion-item-divider>
+    <ion-item>时间：{{date|date:'y年MM月dd日HH时mm分ss秒'}}</ion-item>
+    <ion-item>json对象转str：{{jsonObject|json}}</ion-item>
+    <ion-item>转为大写：{{case | uppercase}}</ion-item>
+    <ion-item>转为小写：{{case | lowercase}}</ion-item>
+    <ion-item>数字处理：{{number|number:'2.3-6'}}</ion-item>
+    <ion-item>货币：{{number|currency:'CNY':true:'1.2-3'}}/{{number|currency:'USD':true}}</ion-item>
+    <ion-item>百分号：{{number|percent}}/{{number|percent:'4.3-5'}}</ion-item>
+    <ion-item>裁减字符串：{{case| slice:1:4}}</ion-item>
+
+    <ion-item-divider>自定义管道</ion-item-divider>
+    <ion-item>性别：{{sex1| sexPipe}}/{{sex2| sexPipe}}/{{case| sexPipe}}</ion-item>
   </ion-list>
 
   <!--组件使用-->

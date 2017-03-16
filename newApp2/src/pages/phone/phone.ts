@@ -6,6 +6,7 @@ import { PhoneMailPage } from './phone-mail/phone-mail';
 import { PhoneCameraPage } from './phone-camera/phone-camera';
 import { PhoneNativePage } from  './phone-native/phone-native';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
+import { PhoneAESPage } from './phone-aes/phone-aes';
 import { XxxPage } from '../../pages/xxx/xxx';
 
 
@@ -22,7 +23,7 @@ export class PhonePage {
   ionViewDidLoad(){
     this.pageItems = [
       {title:'读写数据库',icon:'keypad',page:PhoneSQLPage,color:'primary'},
-      {title: '加密解密',icon:'key',page:XxxPage,color:'secondary'},
+      {title: '加密解密',icon:'key',page:PhoneAESPage,color:'secondary'},
       {title:'拨打电话',icon:'call',page:PhoneCallPage,color:'danger'},
       {title:'读短信',icon:'mail',page:PhoneMailPage,color:'dark'},
       {title:'摄像机',icon:'camera',page:PhoneCameraPage,color:'primary'},

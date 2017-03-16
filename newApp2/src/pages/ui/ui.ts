@@ -5,6 +5,8 @@ import { UiSegmentSliderPage } from "./ui-segment-slider/ui-segment-slider";
 import { UiListPage } from './ui-list/ui-list';
 import { UiListAdvancedPage } from './ui-list-advanced/ui-list-advanced';
 import { UiListAdvancedImgPage } from './ui-list-advanced-img/ui-list-advanced-img';
+import { UiRefresherPage } from './ui-refresher/ui-refresher';
+import { UiInfiniteScrollPage } from './ui-infinite-scroll/ui-infinite-scroll';
 
 interface Todo {
   completed: boolean;
@@ -23,7 +25,9 @@ export class UiPage {
     {name:"segment，分类列表-滑动",page:UiSegmentSliderPage},
     {name:"item，列表成员-初级",page:UiListPage},
     {name:"item，列表成员-中级",page:UiListAdvancedPage},
-    {name:"item，列表成员-高级（图片）",page:UiListAdvancedImgPage}
+    {name:"item，列表成员-高级（图片）",page:UiListAdvancedImgPage},
+    {name:"refresher，下拉刷新",page:UiRefresherPage},
+    {name:"infiniteScroll，上滑刷新",page:UiInfiniteScrollPage}
   ];
   constructor(public navCtrl: NavController) {
 

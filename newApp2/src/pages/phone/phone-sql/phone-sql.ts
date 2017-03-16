@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, } from 'ionic-angular';
 import { SQLite } from 'ionic-native';
+import {Platform} from 'ionic-angular';
 
 
 @Component({
@@ -8,31 +9,47 @@ import { SQLite } from 'ionic-native';
   templateUrl: 'phone-sql.html'
 })
 export class PhoneSQLPage {
+  public database: SQLite;
+  public people: Array<Object>;
+  firstname;
+  lastname;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.openDatabase();
+  constructor(private navController: NavController, private platform: Platform) {
+    this.platform.ready().then(() => {
+      this.database = new SQLite();
+      this.database.openDatabase({name: "data.db", location: "default"}).then(() => {
+        this.refresh();
+      }, (error) => {
+        console.log("ERROR: ", error);
+      });
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhoneSQLPage');
   }
 
-  openDatabase(){
-    console.log('openDatabase方法');
-    //打开数据库
-    SQLite.openDatabase({
-      name: 'data.db',
-      location: 'default'
-    })
-      .then((db: SQLite) => {
-        console.log("打开数据库成功！",db);
-        db.executeSql('create table danceMoves(name VARCHAR(32))', {}).then(() => {
-          console.log("创建数据库表成功！");
-        }).catch(() => {
-          console.log("创建数据库表失败！");
-        });
-      })
-      .catch(error => console.error('打开数据库失败！', error));
+  public add() {
+
+    this.database.executeSql("INSERT INTO people (firstname, lastname) VALUES (?, ?)", [this.firstname,this.lastname]).then((data) => {
+      console.log("INSERTED: " + JSON.stringify(data));
+    }, (error) => {
+      console.log("ERROR: " + JSON.stringify(error.err));
+    });
+  }
+
+  public refresh() {
+    this.database.executeSql("SELECT * FROM people", []).then((data) => {
+      console.log('读取数据库：',data);
+      this.people = [];
+      if(data.rows.length > 0) {
+        for(var i = 0; i < data.rows.length; i++) {
+          this.people.push({firstname: data.rows.item(i).firstname, lastname: data.rows.item(i).lastname});
+        }
+      }
+    }, (error) => {
+      console.log("ERROR: " + JSON.stringify(error));
+    });
   }
 
 }

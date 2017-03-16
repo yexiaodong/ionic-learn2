@@ -1,5 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler,Platform } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Data } from '../providers/data';
+
 import { MyApp } from './app.component';
 import { UiPage } from '../pages/ui/ui';
 import { ContactPage } from '../pages/contact/contact';
@@ -9,14 +12,13 @@ import { PhonePage } from '../pages/phone/phone';
 import {AddItemPage} from '../pages/add-item-page/add-item-page';
 import {ItemDetailPage} from '../pages/item-detail-page/item-detail-page';
 import { XxxPage } from '../pages/xxx/xxx';
-
 import { ModelTestPage } from '../pages/model-test/model-test';
 import { ModelInputsOutputsPage } from '../pages/model-inputs-outputs/model-inputs-outputs';
 import { UiModule } from '../pages/ui/ui.module';
 import { PhoneModule } from '../pages/phone/phone.module';
+import { SexPipe } from '../providers/sex-pipe';
 
-import { Storage } from '@ionic/storage';
-import { Data } from '../providers/data';
+
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { Data } from '../providers/data';
     XxxPage,
     ModelTestPage,
     ModelInputsOutputsPage,
+    SexPipe
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -54,4 +57,5 @@ import { Data } from '../providers/data';
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data]
 })
-export class AppModule {}
+export class AppModule {
+}
