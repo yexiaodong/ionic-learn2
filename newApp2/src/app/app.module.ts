@@ -21,6 +21,7 @@ import { SexPipe } from '../providers/sex-pipe';
 
 
 
+
 @NgModule({
   declarations: [
     MyApp,

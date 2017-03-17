@@ -12,7 +12,7 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ui-infinite-scroll.html'
 })
 export class UiInfiniteScrollPage {
-  items = ['初始化1','初始化2'];
+  items = ['初始化1','初始化2','初始化3','初始化4','初始化5','初化6','初始化7','初始化8','初化9','初始化10','初始化11'];
   i = 3;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
