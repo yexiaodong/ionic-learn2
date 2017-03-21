@@ -16,8 +16,10 @@ export class TabsPage {
   tab4Root: any = PhonePage;
 
   constructor() {
+    /*徽章，页面调试需要注释，否则报错
     Badge.set(10).then((val)=>{
       alert(val);
     });
+    */
   }
 }

@@ -8,6 +8,8 @@ import { PhoneNativePage } from  './phone-native/phone-native';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { XxxPage } from '../../pages/xxx/xxx';
+import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
+import { PhoneStarPage } from './phone-star/phone-star';
 
 
 @Component({
@@ -29,7 +31,11 @@ export class PhonePage {
       {title:'摄像机',icon:'camera',page:PhoneCameraPage,color:'primary'},
       {title:'入门使用',icon:'book',page:PhoneNativePage,color:'secondary'},
       {title:'相册',icon:'heart',page:PhoneMailPage,color:'danger'},
-      {title:'待定',icon:'heart',page:XxxPage,color:'light'}
+      {title:'方法生命周期',icon:'ios-analytics',page:PhoneAngularCyclePage,color:'dark'},
+      {title:'星级评分',icon:'ios-star',page:PhoneStarPage,color:'primary'},
+      {title: '待开发',icon:'key',page:XxxPage,color:'secondary'},
+      {title:'待开发',icon:'call',page:XxxPage,color:'danger'},
+      {title:'待开发',icon:'mail',page:XxxPage,color:'dark'},
     ];
   }
 

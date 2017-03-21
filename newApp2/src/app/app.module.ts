@@ -40,7 +40,8 @@ import { SexPipe } from '../providers/sex-pipe';
   imports: [
     IonicModule.forRoot(MyApp),
     UiModule,
-    PhoneModule
+    PhoneModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
