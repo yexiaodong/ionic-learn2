@@ -1,0 +1,16 @@
+page-home { 
+  ion-grid{
+    padding:0;
+    border:1px solid map_get($colors, 'light');
+    border-width:1px 0;
+    ion-col{
+      text-align: center;
+      border:1px solid map_get($colors, 'light');
+      border-width:0 1px 1px 0;
+      border-collapse: collapse;
+      ion-icon{
+        font-size:50px;
+      }
+    }
+  } 
+}
