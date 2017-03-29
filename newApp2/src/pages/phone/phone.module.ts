@@ -13,6 +13,7 @@ import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
 import { PhoneStarPage } from './phone-star/phone-star';
+import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PhoneStarPage } from './phone-star/phone-star';
     PhoneSQLPage,
     PhoneAESPage,
     PhoneAngularCyclePage,
-    PhoneStarPage
+    PhoneStarPage,
+    PhoneFuWenBenPage
   ],
   entryComponents: [
     PhoneCallPage,
@@ -37,7 +39,8 @@ import { PhoneStarPage } from './phone-star/phone-star';
     PhoneSQLPage,
     PhoneAESPage,
     PhoneAngularCyclePage,
-    PhoneStarPage
+    PhoneStarPage,
+    PhoneFuWenBenPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data],
   exports: [IonicModule]
