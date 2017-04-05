@@ -16,6 +16,7 @@ import { ModelTestPage } from '../pages/model-test/model-test';
 import { ModelInputsOutputsPage } from '../pages/model-inputs-outputs/model-inputs-outputs';
 import { UiModule } from '../pages/ui/ui.module';
 import { PhoneModule } from '../pages/phone/phone.module';
+import { TypescriptModule } from '../pages/typescript/typescript.module';
 import { SexPipe } from '../providers/sex-pipe';
 
 
@@ -39,7 +40,8 @@ import { SexPipe } from '../providers/sex-pipe';
   imports: [
     IonicModule.forRoot(MyApp),
     UiModule,
-    PhoneModule
+    PhoneModule,
+    TypescriptModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

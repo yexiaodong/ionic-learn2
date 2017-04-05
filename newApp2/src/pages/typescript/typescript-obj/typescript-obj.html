@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>对象</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items" >
+      {{item.username}}
+      <span [hidden]="!item.isShow">{{item.password}}-{{item.isShown}}</span>
+      <span [hidden]="item.isShow" (click)="show(item)">显示密码</span>
+    </ion-item>
+
+    <ion-item>
+      {{user.username}}/{{user.password}}/{{user.isShow}}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
