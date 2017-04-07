@@ -17,6 +17,14 @@
   <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged($event)" >
     <ion-slide *ngFor="let slide of slides">
       <h1>{{slide.title}}</h1>
+      <h2>缺点</h2>
+      <span>
+        下滑时，两边是同时下滑的。这样造成两个问题：
+        1.当一边内容比较多少，会导致另个一边的内容无限下滑；
+        2.当下滑刷新时，会导致每个slides点内容都刷新。
+        <br>
+        总结：该方法无法做到类似今日头条的样子。
+        </span>
     </ion-slide>
   </ion-slides>
 
