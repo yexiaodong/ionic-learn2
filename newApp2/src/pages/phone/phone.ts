@@ -9,7 +9,9 @@ import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { TypescriptObjPage } from '../typescript/typescript-obj/typescript-obj';
 import { XxxPage } from '../../pages/xxx/xxx';
-
+import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
+import { PhoneStarPage } from './phone-star/phone-star';
+import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
 
 @Component({
   selector: 'page-phone',
@@ -27,7 +29,11 @@ export class PhonePage {
       {title:'摄像机',icon:'camera',page:PhoneCameraPage,color:'primary'},
       {title:'入门使用',icon:'book',page:PhoneNativePage,color:'secondary'},
       {title:'相册',icon:'heart',page:PhoneMailPage,color:'danger'},
-      {title:'待定',icon:'heart',page:XxxPage,color:'light'}
+      {title:'方法生命周期',icon:'ios-analytics',page:PhoneAngularCyclePage,color:'dark'},
+      {title:'星级评分',icon:'ios-star',page:PhoneStarPage,color:'primary'},
+      {title: '富文本',icon:'key',page:PhoneFuWenBenPage,color:'secondary'},
+      {title:'待开发',icon:'call',page:XxxPage,color:'danger'},
+      {title:'待开发',icon:'mail',page:XxxPage,color:'dark'},
     ];
   }
 

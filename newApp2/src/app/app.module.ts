@@ -22,6 +22,7 @@ import { SexPipe } from '../providers/sex-pipe';
 
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,7 +42,11 @@ import { SexPipe } from '../providers/sex-pipe';
     IonicModule.forRoot(MyApp),
     UiModule,
     PhoneModule,
+<<<<<<< HEAD
     TypescriptModule
+=======
+
+>>>>>>> b3a8b6741ef2afa9eb46ee2db586cb476f2b093d
   ],
   bootstrap: [IonicApp],
   entryComponents: [

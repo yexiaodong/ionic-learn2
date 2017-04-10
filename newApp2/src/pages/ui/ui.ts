@@ -8,6 +8,7 @@ import { UiListAdvancedImgPage } from './ui-list-advanced-img/ui-list-advanced-i
 import { UiRefresherPage } from './ui-refresher/ui-refresher';
 import { UiInfiniteScrollPage } from './ui-infinite-scroll/ui-infinite-scroll';
 
+
 interface Todo {
   completed: boolean;
   label: string;
@@ -30,7 +31,6 @@ export class UiPage {
     {name:"infiniteScroll，上滑刷新",page:UiInfiniteScrollPage}
   ];
   constructor(public navCtrl: NavController) {
-
   }
 
   addTodo(label:string){
