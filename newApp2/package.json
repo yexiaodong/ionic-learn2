@@ -39,8 +39,20 @@
     "cordova-plugin-console",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-camera",
+    "cordova-plugin-compat",
+    "mx.ferreyra.callnumber",
+    "cordova-sqlite-storage",
+    "cordova-plugin-badge",
+    "cordova-plugin-app-event"
   ],
-  "cordovaPlatforms": [],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    }
+  ],
   "description": "newApp2: An Ionic project"
 }
