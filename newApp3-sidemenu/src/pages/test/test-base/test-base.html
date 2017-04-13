@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>基础页面</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>新建页面-命令行</h3>
+  <ul>
+    <li>XXX.module.ts有误删除（模块除外）</li>
+    <li>.ts文件中的类名后面加Page</li>
+  </ul>
+
+  <h3>新建页面-复制</h3>
+  <ul>
+    <li>4个重命名，1个文件夹+三个文件</li>
+    <li>1个类名，.ts文件类名</li>
+  </ul>
+
+  <button ion-button (click)="testBtn()">测试按钮-ios-模块对事件触发的影响</button>
+  <ion-list>
+    <ion-item *ngFor="let text of texts">{{text}}</ion-item>
+  </ion-list>
+</ion-content>

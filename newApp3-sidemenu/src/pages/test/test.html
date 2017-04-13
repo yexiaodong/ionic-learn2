@@ -1,12 +1,9 @@
-<!--
-  Generated template for the Test page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>test</ion-title>
   </ion-navbar>
 
@@ -14,5 +11,12 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="pushPage(item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
