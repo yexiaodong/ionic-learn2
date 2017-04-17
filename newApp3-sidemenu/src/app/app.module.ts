@@ -11,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TestModule } from '../pages/test/test.module';
 
+import { EhrService } from '../providers/ehr-service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -31,7 +33,8 @@ import { TestModule } from '../pages/test/test.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EhrService
   ]
 })
 export class AppModule {}
