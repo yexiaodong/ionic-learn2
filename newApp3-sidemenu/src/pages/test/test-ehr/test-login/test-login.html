@@ -1,0 +1,26 @@
+<!--
+  Generated template for the TestLogin page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>testLogin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button block (click)="testService()">调用服务test方法</button>
+  <h3>分析原因</h3>
+  <ul>
+    <li>构造方法只有在类声明时执行</li>
+    <li>变量声明-构造方法，沿用调用它的类里生成的实例</li>
+    <li>变量声明-new，生成新实例</li>
+    <li>缓存信息是异步的，导致请求发出后，才获取到token信息</li>
+  </ul>
+
+</ion-content>
