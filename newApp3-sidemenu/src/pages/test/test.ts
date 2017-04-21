@@ -18,7 +18,7 @@ export class Test {
   items = [
     {title:'Test-base',note:'空白页面',page:TestBasePage},
     {title:'Test-EHR',note:'健康档案',page:TestEhrPage}
-  ]
+  ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

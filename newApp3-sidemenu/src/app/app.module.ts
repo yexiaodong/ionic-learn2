@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ApiModule } from '../pages/api/api.module';
 import { TestModule } from '../pages/test/test.module';
 
 import { EhrService } from '../providers/ehr-service';
@@ -22,7 +23,8 @@ import { EhrService } from '../providers/ehr-service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    TestModule
+    TestModule,
+    ApiModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
