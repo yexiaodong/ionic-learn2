@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AlertController</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>使用</ion-card-header>
+    <ion-card-content>
+      alert，警告。不像ActionSheetController那样实现对应的native。
+      <a href="http://ionicframework.com/docs/api/components/alert/AlertController/">官网</a><br>
+      <button ion-button (click)="presentAlert()">警告</button>
+      <button ion-button (click)="presentConfirm()">确定</button>
+      <button ion-button (click)="presentPrompt()">提示</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>分析-AlertController对象方法</ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>create()，顾名思义，创建一个对象</li>
+        <li>present()，将警告窗口呈现</li>
+        <li>buttons，弹窗按钮，该变量是一个数组</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>分析-create方法的参数对象</ion-card-header>
+    <ion-card-content>
+      <p>对象属性如下：</p>
+      <ul>
+        <li>title，标题</li>
+        <li>subTitle，提示信息</li>
+        <li>buttons，弹窗按钮，该变量是一个数组</li>
+        <li>inputs，文本框，该变量是一个数组</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

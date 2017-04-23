@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ActionSheetControllerPage } from './action-sheet-controller/action-sheet-controller';
+import { AlertControllerPage } from './alert-controller/alert-controller';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,8 @@ import { ActionSheetControllerPage } from './action-sheet-controller/action-shee
 })
 export class ApiPage {
   items = [
-    {title:'ActionSheetController',note:'动作表单',page:ActionSheetControllerPage}
+    {title:'ActionSheetController',note:'弹窗-动作表单',page:ActionSheetControllerPage},
+    {title:'AlertController',note:'弹窗-确认提示',page:AlertControllerPage},
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
