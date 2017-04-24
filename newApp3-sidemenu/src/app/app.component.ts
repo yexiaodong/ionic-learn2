@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ApiPage } from '../pages/api/api';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Test } from '../pages/test/test';
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Test-第一个新增页面', component: Test }
+      { title: 'Test-第一个新增页面', component: Test },
+      { title: 'API', component: ApiPage },
     ];
 
   }
