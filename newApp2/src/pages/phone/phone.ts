@@ -8,6 +8,7 @@ import { PhoneNativePage } from  './phone-native/phone-native';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { TypescriptObjPage } from '../typescript/typescript-obj/typescript-obj';
+import { TypescriptThreadPage } from '../typescript/typescript-thread/typescript-thread';
 import { XxxPage } from '../../pages/xxx/xxx';
 import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
 import { PhoneStarPage } from './phone-star/phone-star';
@@ -40,6 +41,7 @@ export class PhonePage {
   ionViewDidLoad(){
     this.tItems = [
       {title:'对象',icon:'ionic',page:TypescriptObjPage,color:'primary'},
+      {title:'多线程',icon:'alarm',page:TypescriptThreadPage,color:'secondary'},
       {title:'待定',icon:'heart',page:XxxPage,color:'light'}
     ];
   }
