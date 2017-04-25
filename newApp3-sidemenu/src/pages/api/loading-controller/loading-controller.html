@@ -24,4 +24,20 @@
       <button ion-button (click)="presentLoadingText()">文本</button>
     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <ion-card-header>分析</ion-card-header>
+    <ion-card-content>
+      <button ion-button (click)="test()">错误</button>
+      <button ion-button (click)="testEx()">解决</button>
+      <button ion-button (click)="testOther()">其他</button>
+      <p>多个loading在很短的时间内，执行会报错，原因如下：</p>
+      <ul>
+        <li>loading.present()方法无论被执行多少次，关闭只要执行一次dismiss()</li>
+        <li>dismiss()方法是有延迟的</li>
+        <li>如果loading没有呈现出来，执行了dismiss()会报错</li>
+      </ul>
+      <p>解决：声明多个对象</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

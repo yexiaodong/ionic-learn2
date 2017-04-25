@@ -63,4 +63,58 @@ export class LoadingControllerPage {
     }, 5000);
   }
 
+  //错误测试
+  test() {
+    let loading = this.loadingCtrl.create({
+      content: '加载中...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 5000);
+    loading.present();
+    loading.dismiss();
+  }
+
+  //解决1
+  testEx() {
+    let loading1 = this.loadingCtrl.create({
+      content: '加载中1...'
+    });
+    let loading2 = this.loadingCtrl.create({
+      content: '加载中2...'
+    });
+
+    loading1.present();
+    loading2.present();
+
+    setTimeout(() => {
+      loading2.dismiss();
+    }, 5000);
+
+    setTimeout(() => {
+      loading1.dismiss();
+    }, 7000);
+  }
+
+  //测试
+  testOther() {
+    let loading1 = this.loadingCtrl.create({
+      content: '加载中1...'
+    });
+    console.log('present前',loading1);
+    loading1.present();
+    console.log('present后',loading1);
+    setTimeout(() => {
+      console.log('dismiss前',loading1);
+      loading1.dismiss();
+      console.log('dismiss后',loading1);
+    }, 3000);
+    setTimeout(() => {
+      console.log('7000',loading1,loading1._state);
+    }, 7000);
+  }
+
 }
