@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ApiModule } from '../pages/api/api.module';
+import { PluginModule } from '../pages/plugin/plugin.module';
 import { TestModule } from '../pages/test/test.module';
 
 import { EhrService } from '../providers/ehr-service';
@@ -21,10 +22,10 @@ import { EhrService } from '../providers/ehr-service';
     ListPage
   ],
   imports: [
-    BrowserModule,
     IonicModule.forRoot(MyApp),
-    TestModule,
-    ApiModule
+    ApiModule,
+    PluginModule,
+    TestModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

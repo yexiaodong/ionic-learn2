@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiPage } from '../pages/api/api';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { Plugin } from '../pages/plugin/plugin';
 import { Test } from '../pages/test/test';
 
 @Component({
@@ -27,6 +28,7 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Test-第一个新增页面', component: Test },
       { title: 'API', component: ApiPage },
+      { title: 'Plugin-第三方插件使用', component: Plugin },
     ];
 
   }
