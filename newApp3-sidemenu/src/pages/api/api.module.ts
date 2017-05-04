@@ -5,6 +5,7 @@ import { ApiPage } from './api';
 import { ActionSheetControllerModule } from './action-sheet-controller/action-sheet-controller.module';
 import { AlertControllerModule } from './alert-controller/alert-controller.module';
 import { LoadingControllerModule } from './loading-controller/loading-controller.module';
+import { ViewControllerModule } from './view-controller/view-controller.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoadingControllerModule } from './loading-controller/loading-controller
     IonicPageModule.forChild(ApiPage),
     ActionSheetControllerModule,
     AlertControllerModule,
-    LoadingControllerModule
+    LoadingControllerModule,
+    ViewControllerModule
   ],
   exports: [
     ApiPage
