@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ActionSheetControllerPage } from './action-sheet-controller/action-sheet-controller';
 import { AlertControllerPage } from './alert-controller/alert-controller';
 import { LoadingControllerPage } from './loading-controller/loading-controller';
+import { ViewControllerPage } from './view-controller/view-controller';
 
 @IonicPage()
 @Component({
@@ -15,6 +16,7 @@ export class ApiPage {
     {title:'ActionSheetController',note:'弹窗-动作表单',page:ActionSheetControllerPage},
     {title:'AlertController',note:'弹窗-确认提示',page:AlertControllerPage},
     {title:'LoadingController',note:'加载中',page:LoadingControllerPage},
+    {title:'ViewController',note:'当前视图信息',page:ViewControllerPage},
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
