@@ -9,4 +9,13 @@
 
 <ion-content padding>
   <p [innerHTML]="getInnerHtml()">测试</p>
+
+  <div [innerHTML]='getEHR()'></div>
+
+  <ion-card>
+    <ion-card-header>分析</ion-card-header>
+    <ion-card-content>
+      当富文本内容直接放在innerHTML标签内会导致部分样式不生效（如居中、下划线等）
+    </ion-card-content>
+  </ion-card>
 </ion-content>
