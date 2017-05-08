@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>modal影响</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>描述</ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>在“健康档案”项目中，由于咨询模块的列表是modal，而且答复也是modal，（即双modal）。</li>
+        <li>提交答复后，也没有关闭modal，而是直接跳转（使用this.navCtrl.setRoot）。</li>
+        <li>导致：退出时，页面没有跳转。（即app.getRootNav().setRoot(pushPage)无效）</li>
+        <li>解决：关闭model。</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

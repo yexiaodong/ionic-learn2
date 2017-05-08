@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { PhoneCallPage } from './phone-call/phone-call';
 import { PhoneMailPage } from './phone-mail/phone-mail';
 import { PhoneCameraPage } from './phone-camera/phone-camera';
+import { PhoneModalPage } from './phone-modal/phone-modal';
 import { PhoneNativePage } from  './phone-native/phone-native';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
@@ -33,7 +34,7 @@ export class PhonePage {
       {title:'方法生命周期',icon:'ios-analytics',page:PhoneAngularCyclePage,color:'dark'},
       {title:'星级评分',icon:'ios-star',page:PhoneStarPage,color:'primary'},
       {title: '富文本',icon:'key',page:PhoneFuWenBenPage,color:'secondary'},
-      {title:'待开发',icon:'call',page:XxxPage,color:'danger'},
+      {title:'modal影响',icon:'ios-bug',page:PhoneModalPage,color:'danger'},
       {title:'待开发',icon:'mail',page:XxxPage,color:'dark'},
     ];
   }

@@ -9,6 +9,7 @@ import { PhoneCallPage } from './phone-call/phone-call';
 import { PhoneCameraPage } from './phone-camera/phone-camera';
 import { PhoneNativePage } from './phone-native/phone-native';
 import { PhoneMailPage } from './phone-mail/phone-mail';
+import { PhoneModalPage } from './phone-modal/phone-modal';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
@@ -29,7 +30,8 @@ import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
     PhoneAESPage,
     PhoneAngularCyclePage,
     PhoneStarPage,
-    PhoneFuWenBenPage
+    PhoneFuWenBenPage,
+    PhoneModalPage
   ],
   entryComponents: [
     PhoneCallPage,
@@ -40,7 +42,8 @@ import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
     PhoneAESPage,
     PhoneAngularCyclePage,
     PhoneStarPage,
-    PhoneFuWenBenPage
+    PhoneFuWenBenPage,
+    PhoneModalPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data],
   exports: [IonicModule]
