@@ -10,27 +10,29 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ApiModule } from '../pages/api/api.module';
-import { TestModule } from '../pages/test/test.module';
 
+import { TestModule } from '../pages/test/test.module';
 import { EhrService } from '../providers/ehr-service';
+
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     TestModule,
-    ApiModule
+    ApiModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
   ],
   providers: [
     StatusBar,

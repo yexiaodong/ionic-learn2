@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>组件</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  父页面：<input name="username" type="text" [(ngModel)]="username"><br>
+  父页面:{{username}}
+  <component-list [username]="username" (myClick)="doMyClick($event)"></component-list>
+</ion-content>
