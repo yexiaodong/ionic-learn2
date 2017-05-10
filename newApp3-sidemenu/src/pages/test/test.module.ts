@@ -6,6 +6,7 @@ import { ComponentList } from '../../components/component-list/component-list';
 import { TestComponentPage } from './test-component/test-component';
 import { TestEhrPage } from './test-ehr/test-ehr';
 import { TestLoginPage } from './test-ehr/test-login/test-login';
+import { TestInputModule } from './test-input/test-input.module';
 
 import { EhrService } from '../../providers/ehr-service';
 
@@ -26,7 +27,8 @@ import { EhrService } from '../../providers/ehr-service';
     TestLoginPage
   ],
   imports: [
-    IonicPageModule.forChild(Test)
+    IonicPageModule.forChild(Test),
+    TestInputModule
   ],
   exports: [
     Test,

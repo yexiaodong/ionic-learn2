@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>多换文本</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <textarea name="myTextarea" [(ngModel)]="myTextarea"></textarea><br>
+  {{myTextarea}}
+  <br>
+  <button ion-button (click)="deal()">处理</button>
+  处理结果:<div id="dealResult"></div>
+</ion-content>
