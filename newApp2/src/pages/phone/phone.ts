@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { PhoneCallPage } from './phone-call/phone-call';
 import { PhoneMailPage } from './phone-mail/phone-mail';
 import { PhoneCameraPage } from './phone-camera/phone-camera';
+import { PhoneDatePickerPage } from './phone-date-picker/phone-date-picker';
 import { PhoneModalPage } from './phone-modal/phone-modal';
 import { PhoneNativePage } from  './phone-native/phone-native';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
@@ -35,6 +36,7 @@ export class PhonePage {
       {title:'星级评分',icon:'ios-star',page:PhoneStarPage,color:'primary'},
       {title: '富文本',icon:'key',page:PhoneFuWenBenPage,color:'secondary'},
       {title:'modal影响',icon:'ios-bug',page:PhoneModalPage,color:'danger'},
+      {title:'时间选择器',icon:'calendar',page:PhoneDatePickerPage,color:'dark'},
       {title:'待开发',icon:'mail',page:XxxPage,color:'dark'},
     ];
   }

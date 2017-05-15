@@ -7,6 +7,7 @@ import { Ionic2RatingModule  } from 'ionic2-rating';
 
 import { PhoneCallPage } from './phone-call/phone-call';
 import { PhoneCameraPage } from './phone-camera/phone-camera';
+import { PhoneDatePickerPage } from './phone-date-picker/phone-date-picker';
 import { PhoneNativePage } from './phone-native/phone-native';
 import { PhoneMailPage } from './phone-mail/phone-mail';
 import { PhoneModalPage } from './phone-modal/phone-modal';
@@ -15,6 +16,7 @@ import { PhoneAESPage } from './phone-aes/phone-aes';
 import { PhoneAngularCyclePage } from './phone-angular-cycle/phone-angular-cycle';
 import { PhoneStarPage } from './phone-star/phone-star';
 import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
+import { DatePicker } from '@ionic-native/date-picker';
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
   declarations: [
     PhoneCallPage,
     PhoneCameraPage,
+    PhoneDatePickerPage,
     PhoneNativePage,
     PhoneMailPage,
     PhoneSQLPage,
@@ -36,6 +39,7 @@ import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
   entryComponents: [
     PhoneCallPage,
     PhoneCameraPage,
+    PhoneDatePickerPage,
     PhoneNativePage,
     PhoneMailPage,
     PhoneSQLPage,
@@ -45,7 +49,7 @@ import { PhoneFuWenBenPage } from './phone-fu-wen-ben/phone-fu-wen-ben';
     PhoneFuWenBenPage,
     PhoneModalPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data],
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,Data,DatePicker],
   exports: [IonicModule]
 })
 export class PhoneModule {}
