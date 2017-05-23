@@ -7,6 +7,7 @@ import { PhoneCameraPage } from './phone-camera/phone-camera';
 import { PhoneDatePickerPage } from './phone-date-picker/phone-date-picker';
 import { PhoneModalPage } from './phone-modal/phone-modal';
 import { PhoneNativePage } from  './phone-native/phone-native';
+import { PhonePhotoViewerPage } from './phone-photo-viewer/phone-photo-viewer';
 import { PhoneSQLPage } from './phone-sql/phone-sql';
 import { PhoneAESPage } from './phone-aes/phone-aes';
 import { TypescriptObjPage } from '../typescript/typescript-obj/typescript-obj';
@@ -29,14 +30,20 @@ export class PhonePage {
       {title: '加密解密',icon:'key',page:PhoneAESPage,color:'secondary'},
       {title:'拨打电话',icon:'call',page:PhoneCallPage,color:'danger'},
       {title:'读短信',icon:'mail',page:PhoneMailPage,color:'dark'},
+
       {title:'摄像机',icon:'camera',page:PhoneCameraPage,color:'primary'},
       {title:'入门使用',icon:'book',page:PhoneNativePage,color:'secondary'},
       {title:'相册',icon:'heart',page:PhoneMailPage,color:'danger'},
       {title:'方法生命周期',icon:'ios-analytics',page:PhoneAngularCyclePage,color:'dark'},
+
       {title:'星级评分',icon:'ios-star',page:PhoneStarPage,color:'primary'},
       {title: '富文本',icon:'key',page:PhoneFuWenBenPage,color:'secondary'},
       {title:'modal影响',icon:'ios-bug',page:PhoneModalPage,color:'danger'},
       {title:'时间选择器',icon:'calendar',page:PhoneDatePickerPage,color:'dark'},
+
+      {title:'图片放大',icon:'image',page:PhonePhotoViewerPage,color:'primary'},
+      {title: '待开发',icon:'key',page:XxxPage,color:'secondary'},
+      {title:'待开发',icon:'ios-bug',page:XxxPage,color:'danger'},
       {title:'待开发',icon:'mail',page:XxxPage,color:'dark'},
     ];
   }
