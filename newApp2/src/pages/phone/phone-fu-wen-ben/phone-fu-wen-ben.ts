@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitization_service';//富文本
+import { DomSanitizer } from '@angular/platform-browser';//富文本
 
 @Component({
   selector: 'page-phone-fu-wen-ben',
