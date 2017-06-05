@@ -23,7 +23,13 @@
     <ion-item navPush="TestPage">
       test-page
       <div class="item-note" item-right>
-        新建页面、页面跳转（新写法）
+        新建页面的跳转（新写法-navpush）
+      </div>
+    </ion-item>
+    <ion-item (click)="onNewPush()">
+      test-page
+      <div class="item-note" item-right>
+        新建页面的跳转（新写法-方法）
       </div>
     </ion-item>
   </ion-list>

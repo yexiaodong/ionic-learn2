@@ -30,4 +30,8 @@ export class Test {
     this.navCtrl.push(item.page);
   }
 
+  onNewPush(){
+    this.navCtrl.push('TestPage');
+  }
+
 }
