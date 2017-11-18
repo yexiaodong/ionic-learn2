@@ -20,3 +20,56 @@
   line-height: 24px;
   font-size: 22px;
 }
+
+// grid 九宫格问题处理
+// -------------------------------
+.grid.row{
+  padding:0px;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 1px solid #f4f4f4;
+  .col{
+    border: 1px solid #f4f4f4;
+    border-width: 0 1px 1px 0;
+    border-collapse: collapse;
+  }
+  .icon{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+  }
+}
+
+
+// 卡片列表
+// -------------------------------
+.card{
+  .title{
+    font-size: 1rem;
+    color:$calm;
+  }
+  .time{
+    font-size: 0.875rem;
+    color:$minor;
+  }
+  .status{
+    float: right;
+    font-size: 0.875rem;
+    color:$energized;
+  }
+}
+
+//搜索条
+// -------------------------------
+.search-bar{
+  padding: 0px;
+  input{
+    padding:8px;
+    border-bottom: 1px solid #ccc;
+  }
+  button{
+    border:1px solid #ccc ;
+  };
+}
