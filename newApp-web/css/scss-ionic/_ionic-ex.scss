@@ -1,6 +1,29 @@
 // 文件说明：对ionic1的样式bug修复
 // -------------------------------
 
+//a标签重置
+// -------------------------------
+a{
+  text-decoration:none;
+  color:$text-title;
+}
+
+//常用全局样式
+// -------------------------------
+.text-right{
+  text-align: right;
+}
+.padding-no{
+  padding: 0px;
+}
+.margin-no{
+  margin:0px;
+}
+.ellipsis{
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
 
 // 主体内容滚动问题
 // -------------------------------
@@ -9,6 +32,14 @@
   bottom:49px;
   &.has-bar-subfooter{
     bottom:86px;
+  }
+}
+
+// 头部按钮
+// -------------------------------
+.bar-header{
+  .button{
+    border: 0px;
   }
 }
 
@@ -48,7 +79,7 @@
 .card{
   .title{
     font-size: 1rem;
-    color:$calm;
+    color:$text-title;
   }
   .time{
     font-size: 0.875rem;
@@ -59,6 +90,33 @@
     font-size: 0.875rem;
     color:$energized;
   }
+  .more-i{
+    margin-left:5px;
+  }
+}
+
+//list列表，样式1
+.list.card-body{
+  .item{
+    position: relative;
+    padding:5px;
+    .title{
+      @extend .ellipsis;
+      margin:0px;
+      margin-right:70px;
+      font-size: 0.875rem;
+      line-height: 34px;
+      color:$text-title;
+    }
+    .time{
+      position: absolute;
+      top:8px;
+      right: 10px;
+      color:$minor;
+      font-size: 0.75rem;
+    }
+  }
+
 }
 
 //搜索条

@@ -14,8 +14,8 @@ app.controller('gridCtrl',function ($scope) {
             icon:"ion-social-angular"
         },
         {
-            href:'index.html',
-            title:'列表',
+            href:'cardsHeader.html',
+            title:'卡片-带头部',
             icon:"ion-social-youtube"
         },
         {

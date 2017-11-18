@@ -8,7 +8,7 @@
     <script src="js/angularjs/angular.min.js"></script>
     <script src="js/do.js"></script>
   </head>
-  <body ng-app="app" class="indexPage md">
+  <body ng-app="app" class="cardsHeaderPage md">
     <!-- 头部 -->
     <header  ng-controller="headerCtrl">
       <!-- 标题 -->
@@ -20,25 +20,27 @@
 
 
     <!-- 主体内容区 -->
-    <div class="scroll-content has-header stable-bg calm" overflow-scroll="true" ng-controller="cardsCtrl">
-      <!-- 搜索 -->
-      <div class="search-bar row">
-        <input class="col col-90" type="text" placeholder="请输入搜索关键字">
-        <button class="col col-10"><i class="icon ion-search"></i></button>
-      </div>
-
+    <div class="scroll-content has-header stable-bg calm" overflow-scroll="true">
       <!-- 卡片 -->
-      <ul>
-        <li class="card" ng-repeat="x in items">
-          <a class="item item-text-wrap">
-            <h2 class="title" ng-bind="x.title"></h2>
-            <div>
-              <span class="time" ng-bind="x.time"></span>
-              <span class="status" ng-bind="x.status"></span>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <div>
+        <section class="card" ng-controller="cardsCtrl">
+          <div class="item item-divider row" >
+            <h2 class="col col-80" ng-bind="titleName"></h2>
+            <span class="col col-20 text-right">更多<i class="icon ion-more more-i"></i></span>
+          </div>
+          <div class="item item-text-wrap padding-no">
+            <ul class="list card-body list-inset margin-no">
+              <li class="item" ng-repeat="x in items">
+                <a ng-href="{{x.href}}" >
+                  <h3 class="title" ng-bind="x.title"></h3>
+                  <span class="time" ng-bind="x.time"></span>
+                </a>
+
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
 
     </div>
@@ -53,6 +55,6 @@
       </div>
     </footer>
     <script src="js/app.js"></script>
-    <script src="js/page/cardsPage.js"></script>
+    <script src="js/page/cardsHeaderPage.js"></script>
   </body>
 </html>
