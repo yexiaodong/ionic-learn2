@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>ionic的web模板</title>
+    <link href="css/ionic.css" rel="stylesheet">
+    <script src="js/angularjs/angular.min.js"></script>
+    <script src="js/do.js"></script>
+  </head>
+  <body ng-app="app" class="inputPage md">
+    <!-- 头部 -->
+    <header  ng-controller="headerCtrl">
+      <!-- 标题 -->
+      <div class="bar bar-header bar-positive">
+        <button onclick="doBack()" class="button icon ion-chevron-left"></button>
+        <h1 class="title" ng-bind="headerTitle"></h1>
+      </div>
+    </header>
+
+
+    <!-- 主体内容区 -->
+    <div class="scroll-content has-header stable-bg calm" overflow-scroll="true">
+      <!-- 表单 -->
+      <div class="list input-list" ng-controller="inputCtrl">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">姓名</span>
+          <input ng-model="obj.name" type="text" placeholder="请输入您的姓名">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">性别</span>
+          <div class="radio-bar">
+            <input ng-model="obj.sex"  type="radio" name="sex" value="0"><span>男</span>
+            <input ng-model="obj.sex"  type="radio" name="sex" value="1"><span>女</span>
+          </div>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">电话</span>
+          <input ng-model="obj.phone"  type="text" placeholder="请输入您的电话">
+        </label>
+
+        <label class="item item-input item-select">
+          <span class="input-label">职业</span>
+          <select  ng-model="obj.job" >
+            <option value="">== 请选择 ==</option>
+            <option value="0">公务员</option>
+            <option value="1">事业单位工作人员</option>
+            <option value="2">专业技术人员</option>
+            <option value="3">企业管理人员</option>
+            <option value="4">工人</option>
+            <option value="5">农民</option>
+            <option value="6">学生</option>
+            <option value="7">教师</option>
+            <option value="8">医生</option>
+            <option value="9">律师</option>
+            <option value="10">文体人员</option>
+            <option value="11">现役军人</option>
+            <option value="12">自由职业者</option>
+            <option value="13">个体经营者</option>
+            <option value="14">无业人员</option>
+            <option value="15">退（离）休人员</option>
+            <option value="16">其他</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">邮箱</span>
+          <input  ng-model="obj.email"  type="text" placeholder="请输入您的邮箱">
+        </label>
+        <button class="button button-block button-positive" ng-click="submitForm()">提交</button>
+      </div>
+
+
+    </div>
+
+    <!-- 底部 -->
+    <footer ng-controller="footerCtrl">
+      <div class="tabs tabs-positive tabs-icon-top">
+        <a ng-repeat="tab in footerTabs" class="tab-item" ng-href="{{tab.href}}">
+          <i class="icon" ng-class="tab.icon"></i>
+          <span ng-bind="tab.title"></span>
+        </a>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/page/inputPage.js"></script>
+  </body>
+</html>

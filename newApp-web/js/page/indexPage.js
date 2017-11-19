@@ -19,7 +19,7 @@ app.controller('gridCtrl',function ($scope) {
             icon:"ion-social-youtube"
         },
         {
-            href:'index.html',
+            href:'input.html',
             title:'表单',
             icon:"ion-erlenmeyer-flask"
         }
